@@ -1,0 +1,59 @@
+[
+    {
+        "id"  : "7",
+        "image" : "images/prod01/1.jpg",
+        "name"  :   "Produto 1",
+        "description"    : "You just have to put your image size after our URL.",
+        "price" : "59.90",
+        "category"  :   "cardigan",
+        "url"   : "my_url"
+    },
+
+    {
+        "id"  : "12",
+        "image" : "images/prod02/1.jpg",
+        "name"  :   "Produto 2",
+        "description"    : "You just have to put your image size after our URL.",
+        "price" : "49.90",
+        "category"  :   "moleton",
+        "url"   : "my_url"
+    },
+
+    {
+        "id"  : "20",
+        "image" : "images/prod03/1.jpg",
+        "name"  :   "Produto 3",
+        "description"    : "You just have to put your image size after our URL.",
+        "price" : "79.90",
+        "url"   : "my_url"
+    },
+
+    {
+        "id"  : "33",
+        "image" : "images/prod02/1.jpg",
+        "name"  :   "Produto 4",
+        "description"    : "You just have to put your image size after our URL.",
+        "price" : "89.90",
+        "category"  :   "cardigan",
+        "url"   : "my_url"
+    },
+
+    {
+        "id"  : "48",
+        "image" : "images/prod03/1.jpg",
+        "name"  :   "Produto 5",
+        "description"    : "You just have to put your image size after our URL.",
+        "price" : "19.90",
+        "category"  :   "moleton",
+        "url"   : "my_url"
+    },
+
+    {
+        "id"  : "51",
+        "image" : "images/prod01/1.jpg",
+        "name"  :   "Produto 6",
+        "description"    : "You just have to put your image size after our URL.",
+        "price" : "29.90",
+        "url"   : "my_url"
+    }
+]

@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-lg-4">
+        <input class="form-control" placeholder="O que você procura?" data-ng-model="busca" type=""/>
+    </div>
+
+    <div class="col-lg-2">
+        <select class="form-control" id="orderby"  data-ng-model="orderProduct">
+            <option value="selected">Ordernar por</option>
+            <option value="price">Menor Preço</option>
+            <option value="-price">Maior Preço</option>
+            <option>Alfabetica</option>
+
+        </select>
+    </div>
+
+
+
+    <div class="col-lg-3 pull-right">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active">
+                <a href="#">
+                    <span class="badge pull-right">{{ count }}</span>
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                    <span onMouseOver="this.innerHTML='Go to checkout'" onMouseOut="this.innerHTML='Cart'" id="cart">
+                         Cart
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+</div><!-- /.row -->
+
+<div class="col-sm-12"> 
+
+
+<hr>
+<div data-ng-repeat="produto in produtos | filter:busca | orderBy:orderProduct">
+        <div class="col-sm-4 product">
+            <span class="rollover" >
+                <a href="javascript:void(0)" ng-click="addItem(produto.id)"><span class="AddCart">AddCart</span></a>
+            </span>
+
+
+            <!--<h1>{{ produto.name }}</h1>-->
+            <img ng-src="{{ produto.image }}" id="img{{ produto.id  }}" class="img-responsive" width="350" alt=""/> </br>
+            <div class="col-sm-6">
+                <span class="description">
+                    <span id="title{{ produto.id }}" class="nameProduct"> {{ produto.name }} </span>     <br>
+                    {{ produto.description }}
+                </span>
+            </div>
+
+
+            <div class="col-sm-6">
+                <span class="price">
+
+                    {{ produto.price }}
+                </span>
+            </div>
+
+
+
+
+        </div>
+</div>
+
+</div>

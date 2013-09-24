@@ -1,0 +1,86 @@
+<div class="row">
+    
+
+    <div class="col-md-12">
+        <div class="col-lg-4">
+        <input class="form-control" placeholder="O que você procura?" data-ng-model="busca" type=""/>
+    </div>
+
+    <div class="col-lg-2">
+        <select class="form-control" id="orderby"  data-ng-model="orderProduct">
+            <option value="selected">Ordernar por</option>
+            <option value="price">Menor Preço</option>
+            <option value="-price">Maior Preço</option>
+            <option>Alfabetica</option>
+
+        </select>
+    </div>
+
+        <div class="col-md-3 pull-right">
+
+            <ul ui-sref="checkout" class="nav nav-pills pull-right" style="margin-left:5px">
+                
+                    <li class="active">
+                        <a href="#">
+                            <span class="badge pull-right">{{ count }}</span>
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            <span id="cart">
+                                 Cart
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+            
+        
+
+                <ul ui-sref="main" class="nav nav-pills pull-right">
+                    
+                        <li class="active">
+                            <a href="#">
+                                
+                                <span class="glyphicon glyphicon-th"></span>
+                                     <span onMouseOver="this.innerHTML='Go to store'" onMouseOut="this.innerHTML='Store'" id="store">Store</span>
+                                </span>
+                            </a>
+                        </li>
+                </ul>
+            
+        </div>    
+    </div>
+    
+
+</div><!-- /.row -->
+
+<div class="col-sm-12"> 
+
+
+<hr>
+
+    <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th class="text-align"></th>
+            <th class="text-align"></th>
+            <th class="text-align"></th>
+            <th class="text-align"></th>
+            <th class="text-align">{{ data.price }}</th>
+          </tr>
+        </thead>
+    </table>    
+    
+
+</div>
+
+<div class="col-lg-6">
+    <form name="myForm" novalidate ng-submit="submitForm();">
+        <input class="form-control" required name="name" data-ng-model="name" placeholder="Your Name"></input><br>
+          <div class="alert alert-danger" ng-show="myForm.name.$dirty && myForm.name.$invalid">Invalid:<span ng-show="myForm.name.$error.required">Name is required.</span></div>
+        <input class="form-control" required name="lastname" data-ng-model="lastname" placeholder="Your Last Name"></input><br>
+          <div class="alert alert-danger" ng-show="myForm.lastname.$dirty && myForm.lastname.$invalid">Invalid:<span ng-show="myForm.lastname.$error.required">Last Name is required.</span></div>
+        <input type="email" class="form-control" required name="email" data-ng-model="email" placeholder="E-mail"></input><br>
+          <div class="alert alert-danger" ng-show="myForm.email.$dirty && myForm.email.$invalid">Invalid Email <span ng-show="myForm.email.$error.required">Email is required.</span></div>
+        <input type="submit" ng-disabled="myForm.email.$pristine || myForm.email.$dirty && myForm.email.$invalid && myForm.name.$pristine || myForm.name.$dirty && myForm.name.$invalid && myForm.lastname.$pristine || myForm.lastname.$dirty && myForm.lastname.$invalid" class="btn btn-success" value="Enviar">
+    </form>
+
+    
+  </div>

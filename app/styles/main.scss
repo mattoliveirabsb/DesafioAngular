@@ -1,0 +1,100 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+@import "http://getbootstrap.com/dist/css/bootstrap.css";
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,800,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+/* Put your CSS here */
+html, body {
+  margin: 20px;
+}
+
+body {
+    background: #fff;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+a { color:#000;}
+a:hover { color:#000;}
+.btn {
+  padding: 6.5px 12px !important;
+}
+
+.form-control {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  background: #f2f2f2 !important;
+  border: 0px !important;
+  height: 40px;
+}
+
+.product {
+  margin-bottom: 20px;
+}
+.nameProduct {
+  font-size: 16px;
+  font-weight: bold;
+}
+    .description {
+        text-align: justify;
+        font-size: 14px;
+      }
+    .price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 34px;
+    }
+
+    span.rollover {
+      background:#fff;
+      cursor: pointer;
+
+
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      margin-left: 3px;
+      position: absolute;
+      z-index: 10;
+      opacity: 0;
+
+      transition-duration: 4s;
+      -webkit-transition: 0.25s;
+      -moz-transition: 0.25s;
+      -o-transition: 0.25s;
+      transition: 0.25s;
+    }
+    span.rollover:hover {
+      opacity: 1;
+      background: rgba(255,255,255,0.9);
+      max-width: 100%;
+
+      transition-duration: 4s;
+      -webkit-transition: 0.25s;
+      -moz-transition: 0.25s;
+      -o-transition: 0.25s;
+      border-radius: 5px;
+      transition: 0.25s;
+
+    }
+
+      .AddCart {
+        float: left;
+        margin-top: 50%;
+        margin-left: 30%;
+        padding: 5px 20px;
+        border: 2px solid #222;
+        font-weight: 800;
+      }
+
+.cart {
+  margin-top:15px;
+  float: right;
+}
+
+.table {
+  text-align: center;
+}
+
+.text-align {
+  text-align: center;
+}
